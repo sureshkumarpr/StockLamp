@@ -19,7 +19,7 @@
     require_once "vendor/autoload.php";
     use Twilio\Rest\Client;
     
-    function sendMessage() {
+    function sendMessage($productID) {
 
     // Step 2: set our AccountSid and AuthToken from https://twilio.com/console
     $AccountSid = "ACbe0bb5c96c24c1438cc65a3c6a45fc19";
@@ -50,7 +50,7 @@
                 'from' => "+12034032492", 
                 
                 // the sms body
-                'body' => "Hey $name, Your Product is OOS, Please refill!"
+                'body' => "Hey $name, Your Product($productID) is OOS, Please refill!"
             )
         );
 

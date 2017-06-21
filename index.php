@@ -106,7 +106,7 @@
                                                 $status="IN STOCK";
                                             } else {
                                                 $status="OUT OF STOCK";
-                                                //sendMessage();
+                                                sendMessage($row['sku']);
                                             }
                                             echo "<td>".$status."</td>";
                                             echo "<td>".$row['description']."</td>";
